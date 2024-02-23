@@ -13,7 +13,12 @@
 <p>{{Student.name}} who is {{Student.age}}</p>
 {% endfor %}
 </div>
-
+<div class="container-fluid">
+<p>
+    <a class="btn btn-warning" href="{%url 'basic_app:update' pk=school_detail.pk %}">Update</a>
+    <a class="btn btn-danger" href="{% url 'basic_app:delete' pk=school_detail.pk %}">Delete</a>
+</p>
+</div>
 
 
 {% endblock %}

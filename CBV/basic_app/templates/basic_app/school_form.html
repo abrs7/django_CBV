@@ -3,14 +3,21 @@
 {% block body_block %}
   <h1>
     {% if not form.instance.pk %}
-      Create School
+      Create School </h1>
+      <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Create" class="btn btn-primary">
+      </form>
     {% else %}
-      Update School
+     <h1> Update School</h1>
+     <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update" class="btn btn-primary">
+      </form>
+     
     {% endif %}
-  </h1>
-  <form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Create" class="btn btn-primary">
-  </form>
+    
+  
 {% endblock %}

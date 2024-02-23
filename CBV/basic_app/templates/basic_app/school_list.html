@@ -1,15 +1,14 @@
 {% extends 'basic_app/basic_app_base.html' %}
 
-
-
 {% block body_block %}
-<h1>Welcome to a list of all the Schools!!</h1>
-<ol>
-    {% for school in school_list %}
-
-<a href="{% url  'basic_app:school_detail' pk=school.id %}">{{school.name}}</a>
-
-{% endfor %}
-</ol>
-
+  <div class="container">
+    <h1>Welcome to a list of all the Schools!!</h1>
+    <ul class="list-group">
+      {% for school in school_list %}
+        <li class="list-group-item">
+          <a href="{% url 'basic_app:school_detail' pk=school.id %}" class="text-decoration-none text-dark">{{ school.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 {% endblock %}

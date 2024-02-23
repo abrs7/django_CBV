@@ -10,6 +10,7 @@ urlpatterns = [
     path('<int:pk>/', views.SchoolDetailView.as_view(), name='school_detail'),
     re_path('basic_app/create/$', views.SchoolCreateView.as_view(), name='create'),
     path('basic_app/school_update/<int:pk>/', views.SchoolUpdateView.as_view(), name='update'),
+    path('basic_app/school_delete/<int:pk>/', views.SchoolDeleteView.as_view(), name='delete'),
     path('basic_app/school_list',views.SchoolListView.as_view(), name='school_list'),
     # path('basic_app/create/$', views.SchoolCreateView.as_view(), name='create'),
     
