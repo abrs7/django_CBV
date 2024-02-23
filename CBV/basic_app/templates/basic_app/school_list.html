@@ -7,7 +7,7 @@
 <ol>
     {% for school in school_list %}
 
-<a href="{% url 'basic_app:school_detail' pk=school.id %}">{{school.name}}</a>
+<a href="{% url  'basic_app:school_detail' pk=school.id %}">{{school.name}}</a>
 
 {% endfor %}
 </ol>

@@ -19,8 +19,8 @@ from django.urls import path,include
 from basic_app import views
 
 urlpatterns = [
-    path('', views.IndexView.as_view()),
+    path('cmb', views.IndexView.as_view()),
     path('admin/', admin.site.urls),
-    path('basic_app',include('basic_app.urls', namespace='basic_app')),
-    path('basic_app/school_list',views.SchoolListView.as_view(), name='school_list')
+    path('',include('basic_app.urls', namespace='basic_app')),
+    
 ]
